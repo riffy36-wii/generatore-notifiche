@@ -1,0 +1,20 @@
+<title>Crea notifica</title>
+<br>
+<h1>Crea notifiche</h1>
+<p>Inserisci sotto il titolo e il testo.</p>
+<p>Riceverai una notifica con il titolo e testo che hai scritto scritto.</p>
+<br>
+<p>Titolo: <input title='Titolo' id=title></p>
+<p>Testo:</p>
+<textarea id=text title='Testo'>
+</textarea>
+<br>
+<p><button onclick="new Notification(document.getElementById('title').value, { body: document.getElementById('text').value })">Crea</button></p>
+<br>
+<fieldset title='Le notifiche non arrivano?' role=alert>
+<p role=alert>Le notifiche non arrivano?</p>
+<p>Se le notifiche non stanno arrivando, probabilmente non hai i permessi nel tuo browser!</p>
+<p>Clicca qui sotto per attivarli. Se non funziona, controlla anche le impostazioni del telefono o PC.</p>
+<p><button onclick="Notification.requestPermission()">Attiva notifiche</button></p>
+</fieldset>
+w
