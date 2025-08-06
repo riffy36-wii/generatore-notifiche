@@ -10,7 +10,7 @@
 <textarea id=text title='Testo'>
 </textarea>
 <br>
-<p><button onclick="new Notification(document.getElementById('title').value, { body: document.getElementById('text').value })">Crea</button></p>
+<p><button onclick="navigator.serviceWorker.getRegistration().then(r=>r.showNotification(document.getElementById('title').value, { body: document.getElementById('text').value }))">Crea</button></p>
 <br>
 <fieldset title='Le notifiche non arrivano?' role=alert>
 <p role=alert>Le notifiche non arrivano?</p>
@@ -19,3 +19,4 @@
 <p><button onclick="Notification.requestPermission()">Attiva notifiche</button></p>
 </fieldset>
 w
+
